@@ -1,5 +1,5 @@
 # ComprasParaguai
-#Comandos da API
+# Comandos da API
 GET /api/users/: Obter todos os usuários.
 GET /api/users/{id}/: Obter um usuário específico.
 POST /api/users/: Criar um novo usuário.
