@@ -1,0 +1,47 @@
+<!doctype html>
+{% load static %}
+{% load socialaccount %}
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<title>Home &mdash; Compras Paraguai</title>
+</head>
+<body>
+  <section class="vh-100 gradient-custom">
+    {% if user.is_anonymous %}
+
+    {% else %}
+    <div class="row d-flex justify-content-center align-items-center h-100"><h1 style="color: red">Seja bem-vindo(a) {{ user.get_username }}</h1></div>
+    {% endif %}
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+
+              <div class="mb-md-5 mt-md-4 pb-5">
+
+                <h2 class="fw-bold mb-2 text-uppercase">Home</h2>
+                <p class="text-white-50 mb-5">Faça seu login!</p>
+
+
+              <div>
+                <p class="mb-0">Não possui conta? <a href="{% url 'registro' %}" class="text-white-50 fw-bold">Registre-se</a>
+                </p>
+              </div>
+
+              </div>
+              <div class="mb-0">
+              <div class="text-box"><a href="{% url 'login' %}" class="btn btn-white btn-animate">Login</a></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+ </html>
